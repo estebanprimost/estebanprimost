@@ -1,0 +1,40 @@
+{
+  "name": "remix-template-cloudflare-pages",
+  "private": true,
+  "description": "",
+  "license": "",
+  "sideEffects": false,
+  "scripts": {
+    "build": "run-s build:*",
+    "build:css": "npm run generate:css -- --minify",
+    "build:remix": "remix build",
+    "dev": "run-p dev:*",
+    "dev:css": "npm run generate:css -- --watch",
+    "dev:remix": "remix watch",
+    "dev:wrangler": "cross-env NODE_ENV=development wrangler pages dev ./public",
+    "generate:css": "npx tailwindcss -o ./app/tailwind.css",
+    "start": "cross-env NODE_ENV=production npm run dev:wrangler"
+  },
+  "dependencies": {
+    "@remix-run/cloudflare": "^1.4.1",
+    "@remix-run/cloudflare-pages": "^1.4.1",
+    "@remix-run/react": "^1.4.1",
+    "cross-env": "^7.0.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@babel/preset-react": "^7.16.7",
+    "@cloudflare/workers-types": "^3.4.0",
+    "@remix-run/dev": "^1.4.1",
+    "@remix-run/eslint-config": "^1.4.1",
+    "@tailwindcss/typography": "^0.5.2",
+    "eslint": "^8.11.0",
+    "npm-run-all": "^4.1.5",
+    "tailwindcss": "^3.0.24",
+    "wrangler": "beta"
+  },
+  "engines": {
+    "node": ">=14"
+  }
+}

@@ -12,7 +12,7 @@ function ExperienceItem({ title, titleLink = title, date, occupation, links = []
       </div>
 
 
-      <strong className='mt-2 text-base'>{occupation}</strong>
+      <span className='mt-2 text-xl'>{occupation}</span>
 
       <Links
         links={links}

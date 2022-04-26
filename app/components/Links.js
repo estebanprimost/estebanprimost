@@ -22,7 +22,7 @@ const linksHrefs = {
 }
 
 export function Link({ children, ...props }) {
-  return <a className='underline underline-offset-4' target='_blank' rel='noreferrer' {...props}>{children}</a>
+  return <a className='no-underline hover:underline hover:underline-offset-4' target='_blank' rel='noreferrer' {...props}>{children}</a>
 }
 
 export default function Links({ links = [], ...props }) {
@@ -31,7 +31,7 @@ export default function Links({ links = [], ...props }) {
       {
         links.map((link, index) => (
           <Fragment key={link}>
-            <Link href={linksHrefs[link]} className='text-slate-700'>{link}</Link>
+            <Link href={linksHrefs[link]} >{link}</Link>
             {index < links.length - 1 && ' • '}
           </Fragment>
         ))

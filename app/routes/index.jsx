@@ -9,13 +9,13 @@ export default function Index() {
     <div className="bg-white py-6 sm:py-8 lg:py-12">
       <div className="max-w-screen-md px-4 md:px-8 mx-auto">
         <div className='flex justify-between mb-8 flex-col-reverse md:flex-row'>
-          <div>
+          <div className='text-center md:text-left'>
             <h1 className='mb-0 text-6xl'>Esteban Primost</h1>
-            <div className='text-blue-500 text-2xl mb-2'>Co-Founder at <Link href='https://geutstudio.com'>GEUT</Link><br />JS Developer</div>
+            <div className='text-blue-500 text-2xl mb-2'>Co-Fundador de <Link href='https://geutstudio.com'>GEUT</Link><br />JS Developer</div>
           </div>
 
-          <div className='not-prose flex flex-col items-end'>
-            <div className="h-60 md:h-40 w-60 md:w-40 text-right bg-gray-100 overflow-hidden rounded-lg shadow-lg mb-4 md:mb-0">
+          <div className='not-prose flex flex-col mt-2 mb-8 md:mt-0 md:mb-0 items-center md:items-end'>
+            <div className="h-60 md:h-40 w-60 md:w-40 text-center md:text-right bg-gray-100 overflow-hidden rounded-lg shadow-lg mb-4 md:mb-0">
               <img src={EstebanImg} loading="lazy" alt="Esteban Primost" className="w-full h-full object-cover object-center" />
             </div>
             <div className='my-2 text-blue-500'>
